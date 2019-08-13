@@ -1,0 +1,36 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.7.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.changwoo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+	// util
+	compile ('com.google.guava:guava:23.6-jre') {
+		exclude group: 'com.google.j2objc', module: 'j2objc-annotations'
+		exclude group: 'org.codehaus.mojo', module: 'animal-sniffer-annotations'
+	}
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'com.h2database:h2'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
