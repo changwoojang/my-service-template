@@ -26,6 +26,9 @@ dependencies {
 		exclude group: 'com.google.j2objc', module: 'j2objc-annotations'
 		exclude group: 'org.codehaus.mojo', module: 'animal-sniffer-annotations'
 	}
+//	compile('org.springframework.boot:spring-boot-starter-security')
+	compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.7.0'
+	compile group: 'org.mindrot', name: 'jbcrypt', version: '0.4'
 
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
