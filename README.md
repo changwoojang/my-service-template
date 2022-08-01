@@ -1,5 +1,5 @@
-# pre project
-사전 과제
+# project
+
     - 서버개발_v.1.1
    
 ## 필수 요구 사항 
